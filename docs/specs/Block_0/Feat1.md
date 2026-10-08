@@ -19,7 +19,7 @@ Make every deployment checkable. The API reports whether it is healthy, and the 
 - Angular footer on every page: the short SHA (7 characters) and the revision, fetched from `/api/version`.
   - The SPA is served from the API image (multi-stage Dockerfile → `wwwroot`, fallback to `index.html`), so one SHA covers UI and API. Record this in an ADR.
 - Container Apps liveness and readiness probes point at the two health endpoints (Bicep).
-- A smoke-test step in the CD workflow, run after each deploy to `dev`.
+- A smoke-test step in the CD workflow, run after each deploy to `staging`.
 
 ## Acceptance criteria
 
@@ -37,7 +37,7 @@ Make every deployment checkable. The API reports whether it is healthy, and the 
 ## Definition of Done
 
 - [ ] Merged to `main` by pull request with CI green.
-- [ ] Deployed to `dev` through the pipeline; the smoke test passed against the deployed SHA.
+- [ ] Deployed to `staging` through the pipeline; the smoke test passed against the deployed SHA.
 - [ ] Tests: an integration test checks `/health/ready` with PostgreSQL up and down, and a unit or integration test checks the version fallback.
 - [ ] Learning-log entry written.
 

@@ -12,7 +12,7 @@ The first vertical slice, from entity through migration, seed and API to Angular
   - Opening hours: day of week, open time and close time. A day can have several time ranges; a day with no ranges is closed.
   - Primary key: a UUIDv7 GUID (`Guid.CreateVersion7()`; time-ordered, so the index doesn't fragment). URLs use it as is (readable URLs: CP-4, later).
 - The first EF Core migration, which creates the club tables.
-  - In `dev`: a migration bundle (`dotnet ef migrations bundle`), built once in CI and run by the CD workflow before the new revision goes live. The workflow signs in to PostgreSQL with Entra authentication (OIDC) and opens a temporary firewall rule for the runner's IP. A failed bundle stops the deploy.
+  - In `staging`: a migration bundle (`dotnet ef migrations bundle`), built once in CI and run by the CD workflow before the new revision goes live. The workflow signs in to PostgreSQL with Entra authentication (OIDC) and opens a temporary firewall rule for the runner's IP. A failed bundle stops the deploy.
   - Locally (Docker Compose only): `Migrate()` at startup, for convenience.
 - Seed data: at least 2 fictional clubs with every field filled, and fixed IDs (stable across restores and for the smoke tests).
 - Read-only public API:
@@ -29,7 +29,7 @@ The first vertical slice, from entity through migration, seed and API to Angular
 ## Acceptance criteria
 
 - [ ] Applying the migration to an empty database creates the schema without errors.
-- [ ] In `dev`, the CD workflow applies the migration bundle before the new revision is deployed; running it again changes nothing.
+- [ ] In `staging`, the CD workflow applies the migration bundle before the new revision is deployed; running it again changes nothing.
 - [ ] The API's database user can read and write data but not change the schema.
 - [ ] The seed script fills an empty database with the synthetic clubs. Running it again creates no duplicates.
 - [ ] `GET /api/clubs` returns every seeded club, sorted by name.
@@ -47,7 +47,7 @@ The first vertical slice, from entity through migration, seed and API to Angular
 ## Definition of Done
 
 - [ ] Merged to `main` by pull request with CI green.
-- [ ] Deployed to `dev` through the pipeline; the smoke journey passed.
+- [ ] Deployed to `staging` through the pipeline; the smoke journey passed.
 - [ ] Tests: unit tests for the opening-hours model (ordering, closed days, several ranges per day), and integration tests for both endpoints, including the `404`.
 - [ ] Teardown → redeploy → restore done once by hand, with the result noted in the learning log.
 - [ ] Learning-log entry written.
