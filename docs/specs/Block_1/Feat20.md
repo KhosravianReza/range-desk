@@ -1,6 +1,6 @@
-# Feat20 · Officials on the club page (CP-2)
+# Feat20 · Officials on the club page (Profile-2)
 
-**Block:** B1 · **Backlog ID:** CP-2 · **Labels:** `block-1`, `club-profile`, `stretch`
+**Block:** B1 · **Backlog ID:** Profile-2 · **Labels:** `block-1`, `club-profile`, `stretch`
 
 ## Goal
 
@@ -48,6 +48,6 @@ The public club page lists the club's officials (board, range officers, trainers
 
 ## Non-goals
 
-- Photos of officials (CP-3, optional).
+- Photos of officials (Profile-3, optional).
 - Contact details of officials.
 - Board permissions (the role is display-only).

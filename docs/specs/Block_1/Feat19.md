@@ -1,6 +1,6 @@
-# Feat19 · Join a waitlist (LN-6, part 1)
+# Feat19 · Join a waitlist (Booking-8, part 1)
 
-**Block:** B1 · **Backlog ID:** LN-6 · **Labels:** `block-1`, `bookings`, `stretch`
+**Block:** B1 · **Backlog ID:** Booking-8 · **Labels:** `block-1`, `bookings`, `stretch`
 
 ## Goal
 
@@ -48,5 +48,5 @@ A member joins the waitlist for booked slots. This Feat builds the waitlist mode
 
 ## Non-goals
 
-- Promotion on cancel, the LN-9 limit check during promotion, and the Event Grid custom event (LN-6, B4).
-- Waitlist notifications (NT-1, B4).
+- Promotion on cancel, the Booking-5 limit check during promotion, and the Event Grid custom event (Booking-8, B4).
+- Waitlist notifications (Notify-1, B4).

@@ -1,6 +1,6 @@
-# Feat10 · Cancel a booking (LN-4)
+# Feat10 · Cancel a booking (Booking-6)
 
-**Block:** B1 · **Backlog ID:** LN-4 · **Labels:** `block-1`, `bookings`
+**Block:** B1 · **Backlog ID:** Booking-6 · **Labels:** `block-1`, `bookings`
 
 ## Goal
 
@@ -47,6 +47,6 @@ Members cancel their own bookings; range officers and admins cancel any booking 
 
 ## Non-goals
 
-- Waitlist promotion on cancel (LN-6, B4).
-- Cancellation notifications (NT-1, B4).
+- Waitlist promotion on cancel (Booking-8, B4).
+- Cancellation notifications (Notify-1, B4).
 - Cancellation reasons or deadlines.

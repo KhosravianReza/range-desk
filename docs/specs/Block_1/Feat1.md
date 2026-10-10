@@ -1,6 +1,6 @@
-# Feat1 · Sign-in and account linking (CL-3)
+# Feat1 · Sign-in and account linking (Tenancy-3)
 
-**Block:** B1 · **Backlog ID:** CL-3 · **Labels:** `block-1`, `clubs`
+**Block:** B1 · **Backlog ID:** Tenancy-3 · **Labels:** `block-1`, `clubs`
 
 ## Goal
 
@@ -74,7 +74,7 @@ Members sign in with Entra External ID (OIDC + PKCE). The API maps the token's i
 
 - Memberships and roles ([Feat2](Feat2.md)).
 - Self-service club onboarding (out of the MVP).
-- Sign-in without a membership (guest self-booking, OP-3, optional).
+- Sign-in without a membership (guest self-booking, RangeOps-3, optional).
 - A signed-in smoke journey: it needs a stored test-user password. Revisit with Key Vault (B5).
 - Social identity providers and MFA policies.
 - A custom domain for `staging`.

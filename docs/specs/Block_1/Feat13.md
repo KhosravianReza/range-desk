@@ -1,6 +1,6 @@
-# Feat13 · Stock in and out (EQ-4)
+# Feat13 · Stock in and out (Inventory-4)
 
-**Block:** B1 · **Backlog ID:** EQ-4 · **Labels:** `block-1`, `equipment`
+**Block:** B1 · **Backlog ID:** Inventory-4 · **Labels:** `block-1`, `equipment`
 
 ## Goal
 

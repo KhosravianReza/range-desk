@@ -1,6 +1,6 @@
-# Feat2 · Memberships and per-club roles (CL-2)
+# Feat2 · Memberships and per-club roles (Tenancy-2)
 
-**Block:** B1 · **Backlog ID:** CL-2 · **Labels:** `block-1`, `clubs`
+**Block:** B1 · **Backlog ID:** Tenancy-2 · **Labels:** `block-1`, `clubs`
 
 ## Goal
 
@@ -60,4 +60,4 @@ Roles are per club and live in the app's membership table, not in the token. Pol
 - Tenant query filters ([Feat4](Feat4.md)) and the isolation tests ([Feat5](Feat5.md)).
 - Resource-based authorization ([Feat10](Feat10.md)).
 - Role management screens and removing members (out of the MVP; the seed replaces them).
-- Officials on the club page ([Feat20](Feat20.md), CP-2).
+- Officials on the club page ([Feat20](Feat20.md), Profile-2).

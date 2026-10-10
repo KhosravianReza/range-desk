@@ -1,6 +1,6 @@
-# Feat17 · Prices and booking total (EQ-6)
+# Feat17 · Prices and booking total (Inventory-6)
 
-**Block:** B1 · **Backlog ID:** EQ-6 · **Labels:** `block-1`, `equipment`, `stretch`
+**Block:** B1 · **Backlog ID:** Inventory-6 · **Labels:** `block-1`, `equipment`, `stretch`
 
 ## Goal
 
@@ -19,7 +19,7 @@ Each club has member and guest prices for lane slots and items. A booking shows 
   - ammunition price per unit.
 - Strategy: `IPricingStrategy` with `MemberPricing` and `GuestPricing`.
   - A resolver picks the strategy by whether the shooter is a member of the booking's club.
-  - Bookings always use member pricing in the MVP, since guests book only through OP-3 or OP-4 (optional). The guest strategy is unit-tested and used at the counter.
+  - Bookings always use member pricing in the MVP, since guests book only through RangeOps-3 or RangeOps-4 (optional). The guest strategy is unit-tested and used at the counter.
 - Booking total = slots × slot price + rentals ([Feat16](Feat16.md)).
   - Stored on the booking at creation, as a price snapshot; later price changes don't alter it.
   - Additive nullable column; older bookings show no total.
@@ -56,5 +56,5 @@ Each club has member and guest prices for lane slots and items. A booking shows 
 ## Non-goals
 
 - Payments (out of the MVP; paid on site).
-- Guest bookings (OP-3, OP-4, optional).
+- Guest bookings (RangeOps-3, RangeOps-4, optional).
 - Discounts, VAT, other currencies.

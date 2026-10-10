@@ -1,6 +1,6 @@
-# Feat3 · Lanes (LN-1)
+# Feat3 · Lanes (Booking-1)
 
-**Block:** B1 · **Backlog ID:** LN-1 · **Labels:** `block-1`, `bookings`
+**Block:** B1 · **Backlog ID:** Booking-1 · **Labels:** `block-1`, `bookings`
 
 ## Goal
 

@@ -1,6 +1,6 @@
-# Feat8 · No overlapping bookings per shooter (LN-10)
+# Feat8 · No overlapping bookings per shooter (Booking-4)
 
-**Block:** B1 · **Backlog ID:** LN-10 · **Labels:** `block-1`, `bookings`
+**Block:** B1 · **Backlog ID:** Booking-4 · **Labels:** `block-1`, `bookings`
 
 ## Goal
 
@@ -42,4 +42,4 @@ A shooter can't hold overlapping bookings on any lane in any club. A second excl
 
 ## Non-goals
 
-- Booking for another shooter, such as a guest (OP-4, optional).
+- Booking for another shooter, such as a guest (RangeOps-4, optional).

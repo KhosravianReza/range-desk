@@ -1,6 +1,6 @@
-# Feat1 · Health endpoint and deployed version (PL-1)
+# Feat1 · Health endpoint and deployed version (Platform-1)
 
-**Block:** B0 · **Backlog ID:** PL-1 · **Labels:** `block-0`, `platform`
+**Block:** B0 · **Backlog ID:** Platform-1 · **Labels:** `block-0`, `platform`
 
 ## Goal
 

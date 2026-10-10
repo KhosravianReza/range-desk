@@ -1,6 +1,6 @@
-# Feat15 · Firearm must fit the lane (LN-7)
+# Feat15 · Firearm must fit the lane (Booking-9)
 
-**Block:** B1 · **Backlog ID:** LN-7 · **Labels:** `block-1`, `bookings`
+**Block:** B1 · **Backlog ID:** Booking-9 · **Labels:** `block-1`, `bookings`
 
 ## Goal
 
@@ -43,6 +43,6 @@ Every firearm declared on a booking must fit the lane's spectrum: category, cali
 
 ## Non-goals
 
-- Ammunition must fit the firearm (EQ-3, optional).
-- Guest eligibility checks (OP-3, optional).
+- Ammunition must fit the firearm (Inventory-3, optional).
+- Guest eligibility checks (RangeOps-3, optional).
 - Rented club firearms: [Feat16](Feat16.md) applies the same specification.

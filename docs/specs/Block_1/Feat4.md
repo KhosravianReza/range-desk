@@ -1,6 +1,6 @@
-# Feat4 · Clubs as tenants (CL-1)
+# Feat4 · Clubs as tenants (Tenancy-1)
 
-**Block:** B1 · **Backlog ID:** CL-1 · **Labels:** `block-1`, `clubs`
+**Block:** B1 · **Backlog ID:** Tenancy-1 · **Labels:** `block-1`, `clubs`
 
 ## Goal
 

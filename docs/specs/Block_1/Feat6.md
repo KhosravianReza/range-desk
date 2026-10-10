@@ -1,6 +1,6 @@
-# Feat6 · Book a lane (LN-3)
+# Feat6 · Book a lane (Booking-3)
 
-**Block:** B1 · **Backlog ID:** LN-3 · **Labels:** `block-1`, `bookings`
+**Block:** B1 · **Backlog ID:** Booking-3 · **Labels:** `block-1`, `bookings`
 
 ## Goal
 
@@ -11,7 +11,7 @@ A member books 1 or 2 consecutive 30-min slots of a lane (D3). PostgreSQL reject
 - `Booking` (club-scoped) has: lane, shooter, booker, period, status (`Active`, `Cancelled`) and creation time.
   - The booking references its lane directly. Club-firearm rentals get their own table and constraint later ([Feat16](Feat16.md)); there is no shared bookable-resource table.
   - Period: `tstzrange`, half-open `[)`, stored in UTC.
-  - Shooter and booker are separate columns. Both are the signed-in person until OP-4 (optional) lets a member book for a guest. [Feat8](Feat8.md) keys on the shooter.
+  - Shooter and booker are separate columns. Both are the signed-in person until RangeOps-4 (optional) lets a member book for a guest. [Feat8](Feat8.md) keys on the shooter.
 - Domain: `Booking.Create` checks the 30-min grid, a length of 1–2 slots, the lane's opening hours (club time zone, [Feat3](Feat3.md)), and that the start isn't in the past.
 - Database, as raw SQL in the migration:
   - `btree_gist` extension, allow-listed in Bicep (`azure.extensions`).
@@ -60,4 +60,4 @@ A member books 1 or 2 consecutive 30-min slots of a lane (D3). PostgreSQL reject
 - Day view and booking UI ([Feat7](Feat7.md)).
 - Overlaps per shooter ([Feat8](Feat8.md)); the daily limit ([Feat9](Feat9.md)); cancelling ([Feat10](Feat10.md)).
 - Firearms on the booking ([Feat14](Feat14.md)); rentals ([Feat16](Feat16.md)); prices ([Feat17](Feat17.md)).
-- Slot holds (LN-5, B3); booking events and the outbox (B4).
+- Slot holds (Booking-7, B3); booking events and the outbox (B4).

@@ -1,6 +1,6 @@
-# Feat16 · Rent a club firearm with a booking (EQ-2a)
+# Feat16 · Rent a club firearm with a booking (Inventory-2a)
 
-**Block:** B1 · **Backlog ID:** EQ-2a · **Labels:** `block-1`, `equipment`, `stretch`
+**Block:** B1 · **Backlog ID:** Inventory-2a · **Labels:** `block-1`, `equipment`, `stretch`
 
 ## Goal
 
@@ -47,6 +47,6 @@ A member rents specific club firearms together with a lane booking, all or nothi
 
 ## Non-goals
 
-- Renting "any free unit" of a model (EQ-2b, optional).
+- Renting "any free unit" of a model (Inventory-2b, optional).
 - Rental prices ([Feat17](Feat17.md)).
-- A shared bookable-resource table. Revisit only if EQ-2b or another resource type arrives.
+- A shared bookable-resource table. Revisit only if Inventory-2b or another resource type arrives.

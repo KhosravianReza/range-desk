@@ -1,6 +1,6 @@
-# Feat5 · Club route checks and isolation tests (CL-4)
+# Feat5 · Club route checks and isolation tests (Tenancy-4)
 
-**Block:** B1 · **Backlog ID:** CL-4 · **Labels:** `block-1`, `clubs`
+**Block:** B1 · **Backlog ID:** Tenancy-4 · **Labels:** `block-1`, `clubs`
 
 ## Goal
 

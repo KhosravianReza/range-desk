@@ -1,6 +1,6 @@
-# Feat11 · Home: my bookings across clubs (CL-5)
+# Feat11 · Home: my bookings across clubs (Tenancy-5)
 
-**Block:** B1 · **Backlog ID:** CL-5 · **Labels:** `block-1`, `clubs`
+**Block:** B1 · **Backlog ID:** Tenancy-5 · **Labels:** `block-1`, `clubs`
 
 ## Goal
 
@@ -44,6 +44,6 @@ After signing in, a person sees their upcoming bookings from all of their clubs.
 
 ## Non-goals
 
-- Announcements on the home page: they arrive with NT-3, which has no block yet.
+- Announcements on the home page: they arrive with Notify-3, which has no block yet.
 - Waitlist entries on the home page ([Feat19](Feat19.md)).
-- In-app notifications (NT-1, B4).
+- In-app notifications (Notify-1, B4).

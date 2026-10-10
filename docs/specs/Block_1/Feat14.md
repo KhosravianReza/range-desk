@@ -1,6 +1,6 @@
-# Feat14 · Own firearms on a booking (OP-1)
+# Feat14 · Own firearms on a booking (RangeOps-1)
 
-**Block:** B1 · **Backlog ID:** OP-1 · **Labels:** `block-1`, `range-ops`
+**Block:** B1 · **Backlog ID:** RangeOps-1 · **Labels:** `block-1`, `range-ops`
 
 ## Goal
 
@@ -52,5 +52,5 @@ A person registers their own firearms once and declares them on a booking. The b
 
 - Checking firearms against the lane's spectrum ([Feat15](Feat15.md)).
 - Rented club firearms ([Feat16](Feat16.md)).
-- RO check-in and the range register (OP-2, optional).
+- RO check-in and the range register (RangeOps-2, optional).
 - Ownership or permit documents.

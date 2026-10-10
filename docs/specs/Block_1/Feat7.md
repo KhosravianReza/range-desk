@@ -1,6 +1,6 @@
-# Feat7 · Availability day view (LN-2)
+# Feat7 · Availability day view (Booking-2)
 
-**Block:** B1 · **Backlog ID:** LN-2 · **Labels:** `block-1`, `bookings`
+**Block:** B1 · **Backlog ID:** Booking-2 · **Labels:** `block-1`, `bookings`
 
 ## Goal
 
@@ -49,6 +49,6 @@ A day view of lanes × 30-min slots shows which slots are free and which are boo
 
 ## Non-goals
 
-- The `held` state and the Redis cache (LN-5 and LN-2, B3).
+- The `held` state and the Redis cache (Booking-7 and Booking-2, B3).
 - Shooter names and cancelling from the grid ([Feat10](Feat10.md)).
 - Joining a waitlist from a booked slot ([Feat19](Feat19.md)).

@@ -1,6 +1,6 @@
-# Feat12 · Equipment catalogue (EQ-1)
+# Feat12 · Equipment catalogue (Inventory-1)
 
-**Block:** B1 · **Backlog ID:** EQ-1 · **Labels:** `block-1`, `equipment`
+**Block:** B1 · **Backlog ID:** Inventory-1 · **Labels:** `block-1`, `equipment`
 
 ## Goal
 

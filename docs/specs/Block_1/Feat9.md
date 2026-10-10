@@ -1,6 +1,6 @@
-# Feat9 · Daily slot limit (LN-9)
+# Feat9 · Daily slot limit (Booking-5)
 
-**Block:** B1 · **Backlog ID:** LN-9 · **Labels:** `block-1`, `bookings`
+**Block:** B1 · **Backlog ID:** Booking-5 · **Labels:** `block-1`, `bookings`
 
 ## Goal
 
@@ -46,5 +46,5 @@ A shooter books at most 2 slots per lane per club-local day (D3). This rule span
 
 ## Non-goals
 
-- RO duty roster (LN-8, optional).
+- RO duty roster (Booking-10, optional).
 - A configurable limit per club.

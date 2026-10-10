@@ -1,6 +1,6 @@
-# Feat2 · Club directory and club page (CP-1)
+# Feat2 · Club directory and club page (Profile-1)
 
-**Block:** B0 · **Backlog ID:** CP-1 · **Labels:** `block-0`, `club-profile`
+**Block:** B0 · **Backlog ID:** Profile-1 · **Labels:** `block-0`, `club-profile`
 
 ## Goal
 
@@ -10,7 +10,7 @@ The first vertical slice, from entity through migration, seed and API to Angular
 
 - `Club` entity with these fields: name, city, description, history, contact details (address, email, phone, website) and weekly opening hours.
   - Opening hours: day of week, open time and close time. A day can have several time ranges; a day with no ranges is closed.
-  - Primary key: a UUIDv7 GUID (`Guid.CreateVersion7()`; time-ordered, so the index doesn't fragment). URLs use it as is (readable URLs: CP-4, later).
+  - Primary key: a UUIDv7 GUID (`Guid.CreateVersion7()`; time-ordered, so the index doesn't fragment). URLs use it as is (readable URLs: Profile-4, later).
 - The first EF Core migration, which creates the club tables.
   - In `staging`: a migration bundle (`dotnet ef migrations bundle`), built once in CI and run by the CD workflow before the new revision goes live. The workflow signs in to PostgreSQL with Entra authentication (OIDC) and opens a temporary firewall rule for the runner's IP. A failed bundle stops the deploy.
   - Locally (Docker Compose only): `Migrate()` at startup, for convenience.
@@ -71,10 +71,10 @@ The first vertical slice, from entity through migration, seed and API to Angular
 
 ## Non-goals
 
-- Tenancy, query filters and club-scoped authorization. These arrive in B1 (CL-1, CL-4), where `Club` becomes the tenant root.
-- Officials on the club page (CP-2) and photos (CP-3).
+- Tenancy, query filters and club-scoped authorization. These arrive in B1 (Tenancy-1, Tenancy-4), where `Club` becomes the tenant root.
+- Officials on the club page (Profile-2) and photos (Profile-3).
 - Admin screens or write endpoints for clubs (out of the MVP; the seed script replaces them).
-- Holiday or exception opening hours, and lane opening hours (LN-1).
+- Holiday or exception opening hours, and lane opening hours (Booking-1).
 - Search, filtering and paging in the directory.
-- Readable club URLs with a slug (CP-4).
+- Readable club URLs with a slug (Profile-4).
 - Playwright on pull requests against Docker Compose (later).

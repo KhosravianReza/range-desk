@@ -1,6 +1,6 @@
-# Feat18 · Inventory overview (EQ-5)
+# Feat18 · Inventory overview (Inventory-5)
 
-**Block:** B1 · **Backlog ID:** EQ-5 · **Labels:** `block-1`, `equipment`, `stretch`
+**Block:** B1 · **Backlog ID:** Inventory-5 · **Labels:** `block-1`, `equipment`, `stretch`
 
 ## Goal
 
