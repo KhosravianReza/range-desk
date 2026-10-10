@@ -50,3 +50,4 @@ Members cancel their own bookings; range officers and admins cancel any booking 
 - Waitlist promotion on cancel (Booking-8, B4).
 - Cancellation notifications (Notify-1, B4).
 - Cancellation reasons or deadlines.
+- Confirming logbook entries (Logbook-2, B3: needs Logbook-1).

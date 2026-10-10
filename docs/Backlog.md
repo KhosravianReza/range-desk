@@ -116,15 +116,17 @@ Tenant-isolation rules (§4) apply to every feature. RO = range officer. Decisio
 | B0 | Smoke test: health, deployed version, one user journey (CI/CD guide §6) | Platform-1, Profile-1 |
 | B1 | Tenancy, global query filters, isolation tests | Tenancy-1, Tenancy-4 |
 | B1 | External ID sign-in, per-club roles | Tenancy-2, Tenancy-3 |
-| B1 | Policy- and resource-based authorization | Tenancy-2, Booking-6, Logbook-2 |
+| B1 | Policy- and resource-based authorization | Tenancy-2, Booking-6 |
 | B1 | Exclusion constraint | Booking-3, Booking-4 (without AI), Inventory-2a |
 | B1 | Cross-row rule, isolation levels (beyond the roadmap) | Booking-5 |
 | B1 | Optimistic concurrency | Inventory-4 |
 | B1 | No-tracking, projections, indexes, `EXPLAIN ANALYZE`, pooling | Booking-2, Tenancy-5 |
 | B1 | Testcontainers | Booking-3, Booking-4, Booking-5, Inventory-4 |
+| B1 | Person-scoped vs club-scoped data; snapshots | RangeOps-1 |
 | B1+ | Unit tests on domain rules | Booking-9, Inventory-6 |
 | B2 | Revisions, traffic split; worker as second container app | Platform-1; Notify-1 |
 | B3 | Cosmos DB: partitioning, indexing, RU, consistency | Logbook-1, Logbook-3 |
+| B3 | Resource-based authorization; ETag (`If-Match`) concurrency | Logbook-2 |
 | B3 | Change feed; vector search in Cosmos DB | Logbook-4, Logbook-5 |
 | B3 | pgvector, RAG with metadata filter, citations, cross-lingual evaluation | Rules-1, Rules-2, Rules-3 |
 | B3 | Isolation rule 4 in retrieval | Rules-2 (Rules-5) |
