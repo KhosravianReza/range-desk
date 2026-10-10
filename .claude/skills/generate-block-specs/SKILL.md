@@ -27,6 +27,8 @@ If `docs/specs/Block_<x>/` already contains files, ask whether to overwrite, ext
 ## 2. Select and order the features
 
 1. **Collect** every backlog item that belongs to the block: items tagged with it, items whose concept the roadmap assigns to it, and decisions or constraints that touch them. Take only items marked as in scope or MVP. Leave optional items and alternatives out unless the user names them.
+   - If the backlog has a mapping or coverage table (block → concept → items), cross-check it against the tags. Raise every conflict, such as an item mapped to the block but dependent on a later block, or tagged with the block but missing from the table.
+   - Rows marked "B<x>+" mean "from block x on", not "in block x".
 2. **Separate** features from setup tasks such as repo, pipeline or infrastructure scaffolding. Setup tasks go under "Depends on", not into Feat files.
 3. **Order** them: anything another feature needs comes first (pipeline checks, shared models, the first migration). Otherwise, riskiest first. If order doesn't matter, say so.
 4. **Confirm before writing:** show the feature list (number, title, backlog ID, one-line reason for its position) and ask the user to confirm or adjust it.
@@ -59,7 +61,7 @@ Before you present the files, check:
 - **Hidden ordering problems:** an earlier Feat must not need something a later Feat creates. Example: a health check needs a `DbContext` that a later feature introduces. Resolve it with a scope note in the earlier Feat.
 - Cross-references between Feats are correct (`[Feat2](Feat2.md)`), and shared names are the same in every file.
 - Names match the CI/CD guidelines and the roadmap (e.g. environment names). Raise any conflict between them as an open question.
-- Nothing is specced twice, and nothing the backlog assigns to the block is missing.
+- Nothing is specced twice, and nothing the backlog assigns to the block is missing. Each item the backlog assigns to the block is either in a Feat file or named in the Non-goals of the closest Feat, with the reason and its target block (e.g. "Confirming logbook entries (Logbook-2, B3: needs Logbook-1)").
 
 ## 5. Resolve open questions
 
@@ -84,4 +86,4 @@ Use a `## Decisions made` section only when no section fits. Keep `## Open quest
 
 ## 6. Report
 
-End with one line per Feat file (path · title · depends on), and any items still open.
+End with one line per Feat file (path · title · depends on), the items assigned to the block but left out (with the reason), and any items still open.
