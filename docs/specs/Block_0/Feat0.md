@@ -1,6 +1,6 @@
 # Feat0 · Walking skeleton and pipeline (setup)
 
-**Block:** B0 · **Backlog ID:** none (Roadmap B0 steps 1–8) · **Labels:** `block-0`, `platform`
+**Block:** B0 · **Backlog ID:** none (Roadmap B0 steps 1–7) · **Labels:** `block-0`, `platform`
 
 ## Goal
 
@@ -24,7 +24,6 @@ Everything [Feat1](Feat1.md) and [Feat2](Feat2.md) build on: the solution, tests
   - Seed: synthetic data, idempotent. [Feat2](Feat2.md) adds the clubs.
   - Teardown: dump PostgreSQL to a local, git-ignored file, then delete the session's resource group.
   - Restore: on the next deploy, restore the last dump, or seed if there is none.
-- ADR: GitHub Spec Kit, keep or drop (Roadmap B0 step 8).
 
 ## Acceptance criteria
 
