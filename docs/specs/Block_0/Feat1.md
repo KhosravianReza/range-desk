@@ -51,7 +51,7 @@ Make every deployment checkable. The API reports whether it is healthy, and the 
 
 ## Depends on
 
-The B0 walking skeleton (API, Angular shell, PostgreSQL in Docker Compose), CI, Bicep and the OIDC CD workflow. These are setup tasks, not backlog features.
+- [Feat0](Feat0.md): the walking skeleton (API, Angular shell, PostgreSQL in Docker Compose), CI, Bicep and the OIDC CD workflow.
 
 ## Non-goals
 

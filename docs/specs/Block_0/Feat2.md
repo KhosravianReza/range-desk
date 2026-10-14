@@ -65,8 +65,7 @@ The first vertical slice, from entity through migration, seed and API to Angular
 
 ## Depends on
 
-- The B0 walking skeleton, CI, Bicep and the OIDC CD workflow.
-- The seed and teardown scripts (PostgreSQL dump and restore), which are B0 setup tasks.
+- [Feat0](Feat0.md): the walking skeleton, CI, Bicep, the OIDC CD workflow, and the seed, teardown and restore scripts.
 - [Feat1](Feat1.md) for the smoke-test step.
 
 ## Non-goals
