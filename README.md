@@ -73,8 +73,8 @@ Each block ends deployed, tested and documented.
 
 - **Spec-driven:** each increment starts as a short spec in `docs/specs/` (goal, acceptance criteria, non-goals).
 - **AI-assisted, human-owned:** AI agents handle boilerplate; core concepts and tests are written by hand, as the tests serve as the executable specification.
-- **Documented decisions:** ADRs in `docs/adr/`, architecture in `docs/arc42/`.
-- **Trunk-based delivery:** short-lived branches, pull requests with CI checks, squash merge (see `docs/ci-cd.md`).
+- **Documented decisions:** ADRs in [`docs/adr/`](docs/adr/), architecture in [`docs/arc42/`](docs/arc42/), weekly learning log in [`docs/log/`](docs/log/).
+- **Trunk-based delivery:** short-lived branches, pull requests with CI checks, squash merge. `main` is protected by a ruleset kept as code in [`.github/rulesets/main.json`](.github/rulesets/main.json).
 - **Cloud on demand:** the Azure environment is provisioned from Bicep when needed and torn down afterwards to control cost.
 
 ## Repository structure (planned)
@@ -84,9 +84,9 @@ range-desk/
 ├── src/              # API, Angular app, workers, Functions
 ├── tests/            # unit and integration tests
 ├── infra/            # Bicep templates
-├── scripts/          # seed, dump and teardown
-├── docs/             # specs, adr, arc42
-└── .github/workflows/
+├── scripts/          # seed, dump and teardown; GitHub setup
+├── docs/             # specs, adr, arc42, log
+└── .github/          # workflows, rulesets
 ```
 
 ## Getting started
