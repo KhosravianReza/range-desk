@@ -1,0 +1,6 @@
+@RangeDesk.Api_HostAddress = http://localhost:5138
+
+GET {{RangeDesk.Api_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
