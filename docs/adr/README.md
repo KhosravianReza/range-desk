@@ -10,4 +10,4 @@ One decision per file: `NNNN-title-in-kebab-case.md`, numbered in order, copied 
 
 | # | Decision | Status |
 |---|---|---|
-| – | None yet. | – |
+| [0001](0001-serve-spa-from-api-image.md) | Serve the Angular shell from the API image | Accepted |

@@ -1,0 +1,36 @@
+# Local environment: the API (with the Angular shell) and PostgreSQL.
+#   docker compose up --build   →   http://localhost:8080
+name: rangedesk
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/RangeDesk.Api/Dockerfile
+    image: rangedesk-api:local
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: rangedesk
+      POSTGRES_USER: rangedesk
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env (copy .env.example)}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rangedesk -d rangedesk"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:
