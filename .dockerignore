@@ -1,0 +1,14 @@
+**/bin
+**/obj
+**/node_modules
+**/dist
+**/.angular
+**/.vs
+**/.vscode
+**/*.user
+.git
+.github
+docs
+Resources (Local)
+.env
+**/*.env
