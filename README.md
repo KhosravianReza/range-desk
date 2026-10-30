@@ -77,21 +77,45 @@ Each block ends deployed, tested and documented.
 - **Trunk-based delivery:** short-lived branches, pull requests with CI checks, squash merge. `main` is protected by a ruleset kept as code in [`.github/rulesets/main.json`](.github/rulesets/main.json).
 - **Cloud on demand:** the Azure environment is provisioned from Bicep when needed and torn down afterwards to control cost.
 
-## Repository structure (planned)
+## Repository structure
 
 ```
 range-desk/
-├── src/              # API, Angular app, workers, Functions
-├── tests/            # unit and integration tests
-├── infra/            # Bicep templates
-├── scripts/          # seed, dump and teardown; GitHub setup
-├── docs/             # specs, adr, arc42, log
-└── .github/          # workflows, rulesets
+├── src/
+│   ├── RangeDesk.Api/  # ASP.NET Core API; its Dockerfile builds API + Angular into one image
+│   └── RangeDesk.Web/  # Angular shell
+├── tests/              # unit and integration tests
+├── infra/              # Bicep templates
+├── scripts/            # seed, dump and teardown; GitHub setup
+├── docs/               # specs, adr, arc42, log
+├── .github/            # workflows, rulesets
+└── compose.yaml        # local environment: API + PostgreSQL
 ```
+
+Workers and Functions join `src/` in later blocks.
 
 ## Getting started
 
-Setup instructions will be added with Block 0. Prerequisites: .NET SDK, Node.js (LTS), Docker, Python 3.12+, Azure CLI.
+Prerequisites: .NET 10 SDK, Node.js 24 LTS, Docker Desktop.
+
+**Run everything in containers** (API with the Angular shell, PostgreSQL):
+
+```powershell
+cp .env.example .env    # then set a local-only password in .env
+docker compose up --build
+```
+
+- App: http://localhost:8080
+- OpenAPI document: http://localhost:8080/openapi/v1.json
+- PostgreSQL: `localhost:5432`, database and user `rangedesk`
+
+`docker compose down` removes the containers and keeps the data; `docker compose down -v` also deletes the data.
+
+**Develop with hot reload:**
+
+- API: open `RangeDesk.slnx` in Visual Studio and press F5, or run `dotnet run --project src/RangeDesk.Api` (http://localhost:5138).
+- UI: `npm start` in `src/RangeDesk.Web` (http://localhost:4200).
+- Database only: `docker compose up db`.
 
 ## Data and rules
 

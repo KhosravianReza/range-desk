@@ -16,8 +16,8 @@ Make every deployment checkable. The API reports whether it is healthy, and the 
   - `commitSha` is baked into the image at build time (build arg → env var).
   - `revision` comes from the `CONTAINER_APP_REVISION` env var that Container Apps sets.
   - Locally, both fall back to `local`.
+- SPA fallback: Angular routes return `index.html`; unknown `/api/*` and `/health/*` paths return `404`. The API image already serves the SPA ([Feat0](Feat0.md), [ADR 0001](../../adr/0001-serve-spa-from-api-image.md)).
 - Angular footer on every page: the short SHA (7 characters) and the revision, fetched from `/api/version`.
-  - The SPA is served from the API image (multi-stage Dockerfile → `wwwroot`, fallback to `index.html`), so one SHA covers UI and API. Record this in an ADR.
 - Container Apps liveness and readiness probes point at the two health endpoints (Bicep).
 - A smoke-test step in the CD workflow, run after each deploy to `staging`.
 
@@ -45,13 +45,14 @@ Make every deployment checkable. The API reports whether it is healthy, and the 
 
 1. API: health checks (`live`, `ready` with a PostgreSQL check).
 2. API: `/api/version`, with the SHA injected at image build.
-3. Angular: version footer.
-4. Bicep: liveness and readiness probes on the API container app.
-5. CD: smoke-test step (health poll + SHA match).
+3. API: SPA fallback to `index.html`; `404` for unknown `/api/*` and `/health/*` paths.
+4. Angular: version footer.
+5. Bicep: liveness and readiness probes on the API container app.
+6. CD: smoke-test step (health poll + SHA match).
 
 ## Depends on
 
-- [Feat0](Feat0.md): the walking skeleton (API, Angular shell, PostgreSQL in Docker Compose), CI, Bicep and the OIDC CD workflow.
+- [Feat0](Feat0.md): the walking skeleton (API image serving the Angular shell, PostgreSQL in Docker Compose), CI, Bicep and the OIDC CD workflow.
 
 ## Non-goals
 

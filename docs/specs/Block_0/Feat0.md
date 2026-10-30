@@ -10,6 +10,7 @@ Everything [Feat1](Feat1.md) and [Feat2](Feat2.md) build on: the solution, tests
 
 - Repo: `docs/log/`, `docs/adr/`, `docs/arc42/`; `main` ruleset (pull request required, no force pushes, squash merge, merged branches deleted).
 - Solution: ASP.NET Core API, Angular shell, PostgreSQL in Docker Compose.
+  - The API image serves the Angular shell (multi-stage Dockerfile → `wwwroot`): one image and one SHA for UI and API ([ADR 0001](../../adr/0001-serve-spa-from-api-image.md)). The SPA fallback comes with [Feat1](Feat1.md).
   - EF Core and the first migration come with [Feat2](Feat2.md); health checks with [Feat1](Feat1.md).
 - Test project with a first unit test.
 - CI (`ci.yml`): build and test on every pull request to `main` and after each merge.
