@@ -8,4 +8,7 @@
   <Folder Name="/src/">
     <Project Path="src/RangeDesk.Api/RangeDesk.Api.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RangeDesk.UnitTests/RangeDesk.UnitTests.csproj" />
+  </Folder>
 </Solution>
