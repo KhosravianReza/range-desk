@@ -1,5 +1,6 @@
 namespace RangeDesk.UnitTests;
 
+// TODO: Delete after the first real test is added.
 public class TestSetupTests
 {
     [Fact]
